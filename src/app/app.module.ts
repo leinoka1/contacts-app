@@ -16,15 +16,17 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 const routes: Routes = [
   {
-    path: 'add-user',
+    /* path: '',  -- use this empty path for ContactListComponent -- */
+    path: 'add-contact',
     component: AddContactComponent
-  },
+  }
+  /*,
 
   {
-    path: 'users',
-    component: ContactListComponent
+    path: 'contact-list',
+    component: ContactListComponentent
   }
-
+*/
 ];
 
 @NgModule({

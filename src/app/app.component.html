@@ -21,9 +21,30 @@
 
 <div>
 
-<!-- Hello {{selectedUserName}} -->
-  helloooo!!!!!
-
+<!-- Hello {{selectedUserName}}-->
+  <mat-toolbar color="primary">
+ <span> ContactApplication </span>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-fab-container">
+    <mat-sidenav #sidenav mode="side" opened="true">
+      <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <div class="example-scrolling-content">
+        Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
+        fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam
+        nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna
+        aliquam magna.
+      </div>
+    </mat-sidenav>
+    <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <mat-icon>add</mat-icon>
+    </button>
+    <div class="example-scrolling-content">
+      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
+      vel in pellentesque.
+    </div>
+  </mat-sidenav-container>
 </div>
 <!--
 <input [(ngModel)]="selectedUserName">
