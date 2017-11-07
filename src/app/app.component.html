@@ -18,34 +18,44 @@
   </li>
 </ul>
 -->
-
-<div>
+<!--<router-outlet></router-outlet>
+-->
 
 <!-- Hello {{selectedUserName}}-->
+<!--  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>List Contacts</button>
+    <button mat-menu-item>Add Contacts</button>
+  </mat-menu>
+
   <mat-toolbar color="primary">
  <span> ContactApplication </span>
-  </mat-toolbar>
-  <mat-sidenav-container class="example-sidenav-fab-container">
-    <mat-sidenav #sidenav mode="side" opened="true">
-      <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
-        <mat-icon>add</mat-icon>
-      </button>
-      <div class="example-scrolling-content">
-        Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
-        fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam
-        nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna
-        aliquam magna.
-      </div>
-    </mat-sidenav>
-    <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
-      <mat-icon>add</mat-icon>
+  </mat-toolbar>-->
+
+<mat-sidenav-container class="ca-app-container">
+
+  <mat-toolbar>
+    <span>Contact Application</span>
+    <button type="button" mat-button (click)="sidenav.open()">
+      Open sidenav
     </button>
-    <div class="example-scrolling-content">
-      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
-      vel in pellentesque.
-    </div>
-  </mat-sidenav-container>
-</div>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav class="example-sidenav">
+    Select functionality
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>List Contacts</button>
+      <button mat-menu-item>Add Contacts</button>
+    </mat-menu>
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+
+    <p>App content goes here!</p>
+  </div>
+</mat-sidenav-container>
+
 <!--
 <input [(ngModel)]="selectedUserName">
 
