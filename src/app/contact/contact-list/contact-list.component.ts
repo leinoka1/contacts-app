@@ -35,4 +35,7 @@ export class ContactListComponent implements OnInit {
   addContact() {
     this.contactService.addContact(this.newContact);
   }
+  showContactList() {
+    console.log('..from contact list component' + this.contacts);
+  }
 }

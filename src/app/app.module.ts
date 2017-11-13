@@ -20,16 +20,18 @@ import {MaterialComponentsModule} from './material-components/material-component
 const routes: Routes = [
   {
     /* path: '',  -- use this empty path for ContactListComponent -- */
-    path: 'add-contact',
+    path: '',
+    /* path: 'add-contact',*/
     component: AddContactComponent
-  }
-  /*,
-
+  },
   {
     path: 'contact-list',
-    component: ContactListComponentent
+    component: ContactListComponent
+  },
+  {
+    path: 'contact-list-item',
+    component: ContactListItemComponent
   }
-*/
 ];
 
 @NgModule({

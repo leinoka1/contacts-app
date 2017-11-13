@@ -31,29 +31,33 @@
   <mat-toolbar color="primary">
  <span> ContactApplication </span>
   </mat-toolbar>-->
-
+<router-outlet> </router-outlet>
 <mat-sidenav-container class="ca-app-container">
 
   <mat-toolbar>
     <span>Contact Application</span>
     <button type="button" mat-button (click)="sidenav.open()">
-      Open sidenav
+      Click to Open Sidenav
     </button>
   </mat-toolbar>
 
-  <mat-sidenav #sidenav class="example-sidenav">
-    Select functionality
+  <mat-sidenav #sidenav class="ca-app-sidenav">
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>List Contacts</button>
       <button mat-menu-item>Add Contacts</button>
+      <button mat-menu-item (click)="showContactList()">Show Contacts</button>
+
     </mat-menu>
+
   </mat-sidenav>
 
-  <div class="example-sidenav-content">
+  <div class="ca-app-sidenav-content">
 
     <p>App content goes here!</p>
+
   </div>
+
 </mat-sidenav-container>
 
 <!--
