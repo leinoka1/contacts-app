@@ -1,4 +1,10 @@
-<p>
+<!--<p>
   contact-list works!
-  <button (click)="showContactList()">Show Contacts</button>
-</p>
+ &lt;!&ndash; <button (click)="showContactList()">Show Contacts</button>&ndash;&gt;
+</p>-->
+
+<!--<div *ngFor="let contact of contacts">
+  <p>{{contact.firstName}}</p>
+</div>-->
+
+<ca-contact-list-item *ngFor="let contact of contacts" [contact]="contact" (click)="onContactSelect(contact)"></ca-contact-list-item>

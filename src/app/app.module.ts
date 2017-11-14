@@ -16,13 +16,15 @@ import {AddContactComponent} from './contact/add-contact/add-contact.component';
 import {RouterModule, Routes} from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MaterialComponentsModule} from './material-components/material-components.module';
+import { ContactAddressPipe } from './contact/pipes/contact-address.pipe';
+import { ContactDetailComponent } from './contact/contact-list/contact-detail/contact-detail.component';
+import { WelcomePhaseComponent } from './contact/welcome-phase/welcome-phase.component';
 
 const routes: Routes = [
   {
     /* path: '',  -- use this empty path for ContactListComponent -- */
     path: '',
-    /* path: 'add-contact',*/
-    component: AddContactComponent
+    component: ContactListComponent
   },
   {
     path: 'contact-list',
@@ -40,7 +42,10 @@ const routes: Routes = [
     ContactComponent,
     ContactListComponent,
     ContactListItemComponent,
-    AddContactComponent
+    AddContactComponent,
+    ContactAddressPipe,
+    ContactDetailComponent,
+    WelcomePhaseComponent
     ],
   imports: [
     BrowserModule,

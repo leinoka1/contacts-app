@@ -24,14 +24,6 @@ export class AppComponent {
   }
 
   showContactList(contact: Contact) {
-  this.router.navigate(['/contact-list-item']);
-    console.log('here we are');
-    console.log('these are contacts: ' + contact );
-  }
-
-  showAddContact() {
-    /*
-    this.router.navigate(['/add-contact']);
-    */
+  this.router.navigate(['/contact-list']);
   }
 }

@@ -28,8 +28,8 @@ export class ContactListComponent implements OnInit {
   }
 
   onContactSelect(contact: Contact) {
-    this.contactSelected.emit(contact);
-    console.log(contact);
+    // this.contactSelected.emit(contact);
+    console.error(contact);
   }
 
   addContact() {
