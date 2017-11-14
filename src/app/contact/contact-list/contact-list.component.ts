@@ -38,4 +38,7 @@ export class ContactListComponent implements OnInit {
   showContactList() {
     console.log('..from contact list component' + this.contacts);
   }
+  showWelcomeList() {
+    console.log ('WelcomeList..');
+  }
 }

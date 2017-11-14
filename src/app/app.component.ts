@@ -8,7 +8,7 @@ import {Contact} from './contact/services/contact';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-   selectedContact: string;
+  selectedContact: string;
 
   constructor(private router: Router) {
     this.selectedContact = 'ekoodi';
@@ -24,6 +24,15 @@ export class AppComponent {
   }
 
   showContactList(contact: Contact) {
-  this.router.navigate(['/contact-list']);
+    this.router.navigate(['/contact-list']);
+  }
+
+  showWelcomeList() {
+    this.router.navigate(['/welcome-phase']);
+    console.log('welcome');
+  }
+  editContact() {
+    this.router.navigate(['/contact-detail']);
+    console.log('edit');
   }
 }

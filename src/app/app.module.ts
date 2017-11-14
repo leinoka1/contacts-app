@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     /* path: '',  -- use this empty path for ContactListComponent -- */
     path: '',
-    component: ContactListComponent
+    component: WelcomePhaseComponent
   },
   {
     path: 'contact-list',
@@ -33,6 +33,14 @@ const routes: Routes = [
   {
     path: 'contact-list-item',
     component: ContactListItemComponent
+  },
+  {
+    path: 'welcome-phase',
+    component: WelcomePhaseComponent
+  },
+  {
+    path: 'contact-detail',
+    component: ContactDetailComponent
   }
 ];
 

@@ -32,6 +32,7 @@
  <span> ContactApplication </span>
   </mat-toolbar>-->
 
+
 <mat-sidenav-container class="ca-app-container">
 
   <mat-toolbar>
@@ -44,10 +45,10 @@
   <mat-sidenav #sidenav class="ca-app-sidenav">
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>List Contacts</button>
       <button mat-menu-item>Add Contacts</button>
+      <button mat-menu-item (click)="editContact()">Edit Contacts</button>
       <button mat-menu-item (click)="showContactList()">Show Contacts</button>
-
+      <button mat-menu-item (click)="showWelcomeList()">Show Welcome</button>
     </mat-menu>
 
   </mat-sidenav>
@@ -55,7 +56,6 @@
   <div class="ca-app-sidenav-content">
 
     <router-outlet> </router-outlet>
-
 
   </div>
 
