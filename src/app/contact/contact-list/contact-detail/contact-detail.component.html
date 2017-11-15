@@ -1,3 +1,25 @@
-<p>
-  contact-detail works!
-</p>
+
+<div class="contact-detail-container">
+  <mat-form-field>
+    <input matInput placeholder="First Name" [(ngModel)]="contact.firstName">
+  </mat-form-field>
+<br>
+  <mat-form-field>
+    <input matInput placeholder="Last Name" [(ngModel)]="contact.lastName">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Street Address" [(ngModel)]="contact.address">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="City" [(ngModel)]="contact.city">
+  </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Phone Number" [(ngModel)]="contact.phoneNumber">
+  </mat-form-field>
+<br>
+  <button mat-raised-button (click)="onContactCreate()">Create!</button>
+  <button mat-raised-button (click)="onContactCancel()">Cancel!</button>
+</div>

@@ -19,7 +19,16 @@ export class ContactService {
   }
 
   addContact(contact: Contact) {
+    let contactId;
+    if (this.contacts.length === 0) {
+      contactId = 1;
+    } else {
+      const ids = this.contacts.map(c => c.id);
+      console.log(ids);
+      const maxId = Math.max(...ids);
+      console.log('Max id: ' + maxId);
+      contactId = maxId + 1;
+    }
     this.contacts.push(Object.assign({}, contact));
   }
 }
-

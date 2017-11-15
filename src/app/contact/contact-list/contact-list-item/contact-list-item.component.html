@@ -1,8 +1,8 @@
 
   <mat-list-item>
-        <h4 mat-line> <mat-icon> face </mat-icon> {{contact.id}}, {{contact.firstName}}, {{contact.lastName}}, {{contact.city}} </h4>
+        <h4 mat-line class="ca-contact-item"> <mat-icon> face </mat-icon> {{contact.id}}, {{contact.firstName}}, {{contact.lastName}}, {{contact.address}}, {{contact.city}}, {{contact.phoneNumber}} </h4>
   </mat-list-item>
-
+  <button mat-raised-button (click)="onContact()">Change!</button>
 <!-- tää tuli Samin Pipe jutusta
 <p>{{contact | contactAddress}}</p>
 -->

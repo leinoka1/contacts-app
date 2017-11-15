@@ -33,6 +33,10 @@ export class AppComponent {
   }
   editContact() {
     this.router.navigate(['/contact-detail']);
-    console.log('edit');
+    console.log('edit mode');
+  }
+  addContact() {
+    this.router.navigate(['/contact-detail']);
+    console.log('add mode');
   }
 }

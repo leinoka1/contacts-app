@@ -45,7 +45,7 @@
   <mat-sidenav #sidenav class="ca-app-sidenav">
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Add Contacts</button>
+      <button mat-menu-item (click)="addContact()">Add Contacts</button>
       <button mat-menu-item (click)="editContact()">Edit Contacts</button>
       <button mat-menu-item (click)="showContactList()">Show Contacts</button>
       <button mat-menu-item (click)="showWelcomeList()">Show Welcome</button>
