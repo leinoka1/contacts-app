@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EventEmitter, Input } from '@angular/core';
+import {Router} from '@angular/router';
 import {Contact} from '../../services/contact';
 import {ContactService} from '../../services/contact.service';
 
@@ -11,18 +12,22 @@ import {ContactService} from '../../services/contact.service';
 
 export class ContactDetailComponent implements OnInit {
 
+
   public contact: Contact;
   public title: string;
 
-  constructor(private contactService: ContactService) {
+  constructor(private contactService: ContactService, private router: Router) {
     this.title = 'Contact Detail';
     this.contact = new Contact();
   }
 
   onContactCreate() {
     console.log ('on contact go on..');
+
     this.contactService.addContact(this.contact);
+    this.router.navigate(['/contact-list']);
     // Use router to navigate to contact list
+
   }
   onContactCancel() {
     console.log ('on contact Cancel operation');

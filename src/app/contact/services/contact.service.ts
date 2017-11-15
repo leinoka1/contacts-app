@@ -1,9 +1,11 @@
 import {Injectable} from '@angular/core';
 import {Contact} from './contact';
+import {Router} from '@angular/router';
 
 @Injectable()
 export class ContactService {
   private contacts: Contact[];
+
 
   constructor() {
 
@@ -28,7 +30,9 @@ export class ContactService {
       const maxId = Math.max(...ids);
       console.log('Max id: ' + maxId);
       contactId = maxId + 1;
+      console.log('Next id: ' + contactId);
     }
+    contact.id = contactId;
     this.contacts.push(Object.assign({}, contact));
   }
 }
