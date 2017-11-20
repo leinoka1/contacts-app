@@ -35,4 +35,11 @@ export class ContactService {
     contact.id = contactId;
     this.contacts.push(Object.assign({}, contact));
   }
+  editContact(contact: Contact) {
+    console.log('on contact go on edit it at detail ...' + contact);
+    // this.contactService.editContact(this.contact);
+    // this.contactService.addContact(this.contact);
+    // this.router.navigate(['/contact-list']);
+    // Use router to navigate to contact list
+  }
 }

@@ -15,6 +15,7 @@ export class ContactDetailComponent implements OnInit {
 
   public contact: Contact;
   public title: string;
+  selectedContact: Contact;
 
   constructor(private contactService: ContactService, private router: Router) {
     this.title = 'Contact Detail';
@@ -33,6 +34,20 @@ export class ContactDetailComponent implements OnInit {
     console.log ('on contact Cancel operation');
     // Use contact service to add new contact
     // Use router to navigate to contact list
+  }
+
+  onContactEdit(contact: Contact) {
+    this.selectedContact = contact;
+    console.log ('on contact go on edit it ...from contact detail' + this.selectedContact.firstName);
+    // console.log('on contact go on edit it at detail ...' + );
+    // this.contactService.editContact(this.contact);
+    // this.contactService.addContact(this.contact);
+    // this.router.navigate(['/contact-detail']);
+    // this.router.navigate(['/contact-list']);
+    // Use router to navigate to contact list
+  }
+  onContactSelected(contact: Contact) {
+    console.log('contact selected .. from detail component');
   }
   ngOnInit() {
   }
