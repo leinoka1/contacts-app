@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Contact} from './services/contact';
-import {ContactService} from './services/contact.service';
+import {ContactLocalStorageService} from './services/contact-local-storage.service';
 
 @Component({
   selector: 'ca-contact',
@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
   @Output() contactSelected: EventEmitter<Contact>;
   newContact: Contact;
 
-  constructor(private contactService: ContactService) {
+  constructor(private contactService: ContactLocalStorageService) {
       this.title = 'Contact List';
       this.contacts = [];
       this.contactSelected = new EventEmitter();

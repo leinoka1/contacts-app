@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Contact} from '../../services/contact';
-import {ContactService} from '../../services/contact.service';
+import {ContactLocalStorageService} from '../../services/contact-local-storage.service';
 // import {ContactDetailComponent} from './contact-detail';
 
 @Component({
@@ -14,7 +14,7 @@ export class ContactListItemComponent implements OnInit {
 
   public title: string;
   selectedContact: Contact;
-  constructor(private contactService: ContactService, private router: Router) {
+  constructor(private contactService: ContactLocalStorageService, private router: Router) {
   this.title = 'Contact List Item';
 
   /*this.contactSelected = new EventEmitter();

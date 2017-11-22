@@ -35,6 +35,13 @@ namespace ContactWebApi.Repositories
            
         }
 
+        public void DeleteById(int id)
+        {
+            var contact = _contacts.FirstOrDefault(c => c.Id == id);
+            _contacts.Remove(contact);
+        }
+
+
         private void Initialize()
         {
             _contacts = new List<Contact>()

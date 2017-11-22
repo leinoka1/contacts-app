@@ -11,6 +11,7 @@ namespace ContactWebApi.Services
         List<Contact> FindContacts();
         Contact FindContactById(int id);
         void CreateNewContact(Contact contact);
+        void DeleteContact(int id);
 
     }
 }

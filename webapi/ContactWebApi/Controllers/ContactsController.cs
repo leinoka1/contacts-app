@@ -36,9 +36,16 @@ namespace ContactWebApi.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] Contact contact)
         {
+            Console.Write(contact);
             _contactService.CreateNewContact(contact);
             return new JsonResult(contact);
+        }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _contactService.DeleteContact(id);
+            return new NoContentResult();
         }
 
     }

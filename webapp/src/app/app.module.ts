@@ -9,7 +9,7 @@ import {
   MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatMenu,
   MatMenuTrigger, MatSidenavModule, MatToolbarModule
 } from '@angular/material';
-import {ContactService} from './contact/services/contact.service';
+import {ContactLocalStorageService} from './contact/services/contact-local-storage.service';
 import {ContactListComponent} from './contact/contact-list/contact-list.component';
 import {ContactListItemComponent} from './contact/contact-list/contact-list-item/contact-list-item.component';
 import {AddContactComponent} from './contact/add-contact/add-contact.component';
@@ -19,6 +19,9 @@ import {MaterialComponentsModule} from './material-components/material-component
 import { ContactAddressPipe } from './contact/pipes/contact-address.pipe';
 import { ContactDetailComponent } from './contact/contact-list/contact-detail/contact-detail.component';
 import { WelcomePhaseComponent } from './contact/welcome-phase/welcome-phase.component';
+import {ContactService} from './contact/services/contact.service';
+import {ContactHttpService} from './contact/services/contact-http.service';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -66,9 +69,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FlexLayoutModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
    ],
-  providers: [ContactService],
+  providers: [ContactLocalStorageService,
+    ContactService, ContactHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

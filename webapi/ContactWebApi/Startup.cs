@@ -27,6 +27,10 @@ namespace ContactWebApi
         {
             services.AddScoped<IContactService, ContactService>();
             services.AddSingleton<IContactRepository, ContactRepository>();
+            services.AddCors(o => o.AddPolicy("ContactsAppPolicy", builder =>
+            {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            }));
             services.AddMvc();
         }
 
@@ -37,7 +41,7 @@ namespace ContactWebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("ContactsAppPolicy");
             app.UseMvc();
         }
     }

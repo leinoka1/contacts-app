@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {EventEmitter, Input } from '@angular/core';
 import {Router} from '@angular/router';
 import {Contact} from '../../services/contact';
+import {ContactLocalStorageService} from '../../services/contact-local-storage.service';
 import {ContactService} from '../../services/contact.service';
 
 @Component({

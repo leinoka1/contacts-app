@@ -31,5 +31,11 @@ namespace ContactWebApi.Services
             _contactRepository.Create(contact);
           //  return _contactRepository.Create();
         }
+
+        public void DeleteContact(int id)
+        {
+            
+            _contactRepository.DeleteById(id);
+        }
     } 
 }
