@@ -13,6 +13,7 @@ namespace ContactWebApi.Repositories
 
         void Create(Contact contact);
         void DeleteById(int id);
+       // void UpdateOneContact(Contact contact);
 
         // TODO add, update, delete
     }

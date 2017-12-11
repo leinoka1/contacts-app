@@ -38,6 +38,12 @@ namespace ContactWebApi
                 builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
             }));
             services.AddMvc();
+
+            //// Configure database
+            //services.AddDbContext<ContactsDbContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration[ConnectionString]);
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

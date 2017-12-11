@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using ContactWebApi.Models;
 using ContactWebApi.Repositories;
@@ -37,5 +38,11 @@ namespace ContactWebApi.Services
             
             _contactRepository.DeleteById(id);
         }
+/*
+        public void UpdateOneContact(Contact contact)
+        {
+            _contactRepository.UpdateOneContact(contact);
+        }
+        */
     } 
 }

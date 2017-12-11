@@ -47,6 +47,13 @@ namespace ContactWebApi.Controllers
             _contactService.DeleteContact(id);
             return new NoContentResult();
         }
-
+        /*
+        [HttpPut("{id}")]
+        public IActionResult UpdateOneContact(int id, [FromBody] Contact contact)
+        {
+            _contactService.UpdateOneContact(contact);
+            return new JsonResult(contact);
+        }
+        */
     }
 }
