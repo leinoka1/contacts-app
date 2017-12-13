@@ -14,12 +14,10 @@ namespace ContactWebApi.Repositories
         private readonly ContactsDbContext _context;
 
         public ContactRepository(ContactsDbContext context)
-
         {
             _context = context;
             // _contacts = new List<Contact>();
             // Initialize();
-
         }
 
         public List<Contact> GetAll()
@@ -36,29 +34,23 @@ namespace ContactWebApi.Repositories
         {
             _context.Contacts.Add(contact);
             _context.SaveChanges();
-
         }
 
         public void DeleteById(int id)
         {
-            var contact = _contacts.FirstOrDefault(c => c.Id == id);
-            _contacts.Remove(contact);
+            var contact = _context.Contacts.FirstOrDefault(c => c.Id == id);
+            _context.Contacts.Remove(contact);
+            _context.SaveChanges();
         }
 
-        /*public void UpdateById(int id)
-        {
-            var contact = _contacts.FirstOrDefault(c => c.Id == id);
-            _contacts.Insert(id, contact);
-        }
-        
-        */
-        /*
         public void UpdateOneContact(Contact contact)
         {
-            var i = _contacts.FindIndex(c => c.Id == contact.Id);
-            _contacts[i] = contact;
+            _context.Contacts.Update(contact);
+            //var i = _contacts.FindIndex(c => c.Id == contact.Id);
+            //_contacts[i] = contact;
+            _context.SaveChanges();
         }
-        */
+        
         /*
         private void Initialize()
         {

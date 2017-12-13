@@ -38,11 +38,11 @@ namespace ContactWebApi.Services
             
             _contactRepository.DeleteById(id);
         }
-/*
+
         public void UpdateOneContact(Contact contact)
         {
             _contactRepository.UpdateOneContact(contact);
         }
-        */
+        
     } 
 }
