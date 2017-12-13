@@ -10,7 +10,8 @@ export class ContactHttpService {
   private url: string;
 
   constructor(private http: HttpClient) {
-    this.url = environment.endpointUrl + '/contacts';
+    // this.url = environment.endpointUrl + '/contacts';
+    this.url = environment.endpointUrl + '';
   }
 
   get(): Observable<Contact[]> {
