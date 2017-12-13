@@ -20,7 +20,7 @@ export class ContactListItemComponent implements OnInit {
   /*this.contactSelected = new EventEmitter();
   this.newContact = new Contact();*/
 }
-  onContactEdit() {
+  onContactEdit(contact?: Contact) {
     // this.selectedContact = contact;
     console.log ('on contact go on edit it ...from contact list item');
     // console.log ('on contact go on edit it ...from contact list item' + this.selectedContact.firstName);

@@ -23,7 +23,7 @@ export class AppComponent {
     console.log(contact);
   }
 
-  showContactList(contact: Contact) {
+  showContactList(contact?: Contact) {
     this.router.navigate(['/contact-list']);
   }
 

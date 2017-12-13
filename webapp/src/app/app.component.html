@@ -35,23 +35,23 @@
 
 <mat-sidenav-container class="ca-app-container">
 
-  <mat-toolbar>
-    <span>Contact Application</span>
-    <button type="button" mat-button (click)="sidenav.open()">
-      Click to Open Sidenav
-    </button>
-  </mat-toolbar>
-
   <mat-sidenav #sidenav class="ca-app-sidenav">
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="addContact()">Add Contacts</button>
+     <button mat-menu-item (click)="addContact()">Add Contacts</button>
       <button mat-menu-item (click)="editContact()">Edit Contacts</button>
       <button mat-menu-item (click)="showContactList()">Show Contacts</button>
       <button mat-menu-item (click)="showWelcomeList()">Show Welcome</button>
     </mat-menu>
 
   </mat-sidenav>
+
+  <mat-toolbar>
+    <span>Contact Application</span>
+    <button type="button" mat-button (click)="sidenav.open()">
+      Click to Open Sidenav
+    </button>
+  </mat-toolbar>
 
   <div class="ca-app-sidenav-content">
 
