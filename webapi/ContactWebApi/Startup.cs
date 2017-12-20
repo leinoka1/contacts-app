@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace ContactWebApi
 {
@@ -31,12 +32,29 @@ namespace ContactWebApi
             {
                 options.UseSqlServer(Configuration["ConnectonStringAzure"]);
             });
-                services.AddScoped<IContactService, ContactService>();
+
+            services.AddScoped<IContactService, ContactService>();
             services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<ITokenService, TokenService>();
+            // This is an optionally configuration
+            // services.Configure<AzureSettings>(Configuration.GetSection("AzureSettings"));
             services.AddCors(o => o.AddPolicy("ContactsAppPolicy", builder =>
             {
                 builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
             }));
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(options =>
+                {
+
+                    //options.Audience = "<applicationId>";
+                    //options.Authority = "<loginUrl>" + "<directoryId>";
+                    options.Audience = "2c13503c-4a4b-4fa4-a9dd-f279189f65c5";
+                    options.Authority = "https://login.windows.net/" + "6ec2c72d-4603-4299-82de-e8b6751f000a";
+                });
             services.AddMvc();
 
             //// Configure database
@@ -59,8 +77,8 @@ namespace ContactWebApi
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("ContactsAppPolicy");
+            app.UseAuthentication();
             app.UseMvc();
-        }  
-
+        }
     }
 }
