@@ -27,7 +27,7 @@ import {AppLayoutComponent} from './layout/app-layout/app-layout.component';
 import {AuthenticationService} from './user/services/authentication.service';
 import {UserService} from './user/services/user.service';
 import {CaHttpInterceptor} from './config/ca-http-interceptor';
-import { LoginErrorComponent } from './user/login/login-error/login-error/login-error.component';
+import { LoginErrorComponent } from './user/login/login-error/login-error.component';
 import { MatDialogModule } from '@angular/material';
 import {LoginErrorService} from './user/services/login-error.service';
 

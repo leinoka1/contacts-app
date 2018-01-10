@@ -21,6 +21,7 @@ export class ContactHttpService {
   }
   create(contact: Contact) {
     console.log(contact.firstName);
+    console.log(contact.address);
     return this.http.post(this.url, contact).subscribe();
   }
   delete (id: number) {

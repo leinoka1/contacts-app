@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ContactWebApi.Models
 {
@@ -14,6 +15,7 @@ namespace ContactWebApi.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
+        [JsonProperty("address")]
         public string StreetAddress { get; set; }
         public string City { get; set; }
 
@@ -21,7 +23,7 @@ namespace ContactWebApi.Models
         {
         }
 
-        public Contact(int id, string firstName, string lastName, string phoneNumber, string streetAddress, string city)
+        public Contact(int id, string firstName, string lastName, string streetAddress, string phoneNumber, string city)
         {
             Id = id;
             FirstName = firstName;

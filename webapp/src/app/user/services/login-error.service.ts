@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {MatDialog, MatDialogRef} from '@angular/material';
-import {LoginErrorComponent} from '../login/login-error/login-error/login-error.component';
+import {LoginErrorComponent} from '../login/login-error/login-error.component';
 
 @Injectable()
 
