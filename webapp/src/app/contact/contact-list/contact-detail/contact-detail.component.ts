@@ -27,7 +27,7 @@ export class ContactDetailComponent implements OnInit {
     console.log ('on contact go on..');
 
     this.contactService.addContact(this.contact);
-    this.router.navigate(['/contact-list']);
+    this.router.navigate(['/ca/contact-list']);
     // Use router to navigate to contact list
 
   }

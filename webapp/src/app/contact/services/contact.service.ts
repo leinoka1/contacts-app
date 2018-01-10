@@ -22,7 +22,7 @@ export class ContactService {
   }
 
   addContact(contact: Contact) {
-    console.log(contact.firstName);
+    console.log('First Name to be added: ', contact.firstName);
     return this.contactHttpService.create(contact);
   }
 

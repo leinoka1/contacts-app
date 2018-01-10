@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e261b4d4-07b4-4931-9095-b5d067333782" name="Default" comment="" />
+    <list default="true" id="e261b4d4-07b4-4931-9095-b5d067333782" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/src/app/guard.guard.spec.ts" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/src/app/guard.guard.ts" afterPath="$PROJECT_DIR$/webapp/src/app/guard/authentication.guard.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/app.component.css" afterPath="$PROJECT_DIR$/webapp/src/app/app.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/app.component.html" afterPath="$PROJECT_DIR$/webapp/src/app/app.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/app.component.ts" afterPath="$PROJECT_DIR$/webapp/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/app.module.ts" afterPath="$PROJECT_DIR$/webapp/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/contact/contact-list/contact-detail/contact-detail.component.ts" afterPath="$PROJECT_DIR$/webapp/src/app/contact/contact-list/contact-detail/contact-detail.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/contact/services/contact-http.service.ts" afterPath="$PROJECT_DIR$/webapp/src/app/contact/services/contact-http.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/app/contact/services/contact.service.ts" afterPath="$PROJECT_DIR$/webapp/src/app/contact/services/contact.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/environments/environment.azure.ts" afterPath="$PROJECT_DIR$/webapp/src/environments/environment.azure.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/environments/environment.local.ts" afterPath="$PROJECT_DIR$/webapp/src/environments/environment.local.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/src/environments/environment.ts" afterPath="$PROJECT_DIR$/webapp/src/environments/environment.ts" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,9 +37,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/webapp/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="73" />
+    <option name="x" value="-1757" />
+    <option name="y" value="-194" />
     <option name="width" value="1156" />
     <option name="height" value="915" />
   </component>
@@ -44,7 +62,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -52,11 +69,17 @@
               <item name="contacts-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="contacts-app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="contacts-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="contacts-app" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -88,14 +111,15 @@
       <updated>1511248420069</updated>
       <workItem from="1511248425541" duration="8000" />
       <workItem from="1511248535855" duration="18000" />
+      <workItem from="1515395713406" duration="1148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26000" />
+    <option name="totallyTimeSpent" value="1174000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="73" width="1156" height="915" extended-state="0" />
+    <frame x="-1757" y="-194" width="1156" height="915" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24955277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -114,6 +138,37 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-hasmetadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-hasmetadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-deletemetadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-deletemetadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-decorate.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-decorate.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-hasownmetadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-hasownmetadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getownmetadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getownmetadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getmetadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getmetadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-metadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-metadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getmetadatakeys.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-getmetadatakeys.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-definemetadata.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/test/reflect-definemetadata.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/Reflect.js" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/Reflect.d.ts" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/reflect-metadata/Reflect.js.map" />
+        <option value="$PROJECT_DIR$/webapp/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />

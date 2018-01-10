@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+  <mat-input-container floatPlaceholder="auto">
+    <input matInput [(ngModel)]="user.username"
+           type="text"
+           placeholder="Username">
+
+  </mat-input-container>
+  <mat-input-container floatPlaceholder="auto">
+    <input matInput [(ngModel)]="user.password"
+           type="text"
+           placeholder="Password">
+  </mat-input-container>
+  <button mat-raised-button (click)="login()" color="primary">Login</button>
+</div>
